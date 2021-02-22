@@ -1,9 +1,7 @@
-puts 1 + 2
+def multiple_of_three?(n)
+  n % 3 == 0
+end
 
-a = 'Hello,World'
-puts a
-
-b = 'こんにちは'
-puts b
-
-1.to_s
+puts multiple_of_three?(4)
+puts multiple_of_three?(5)
+puts multiple_of_three?(6)
