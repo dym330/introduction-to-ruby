@@ -1,3 +1,3 @@
-numbers = []
-(2..10).step(7) { |n| numbers << n}
-p numbers
+currencies = { "japan" => "yen", "us" => "dollar", "india" => "rupee" }
+currencies.delete("japan")
+p currencies.delete("aaa"){|key| "not found #{key}"}
