@@ -1,3 +1,4 @@
-currencies = { "japan" => "yen", "us" => "dollar", "india" => "rupee" }
-currencies.delete("japan")
-p currencies.delete("aaa"){|key| "not found #{key}"}
+text = "私の誕生日は1997年7月17日です"
+if /(?<year>\d+)年(?<month>\d+)月(?<day>\d+)日/ =~ text
+  puts "#{year}/#{month}/#{day}"
+end
