@@ -1,15 +1,11 @@
-def currency_of(country)
-  case country
-  when :japan
-    "yen"
-  when :us
-    "dollar"
-  when :india
-    "rupee"
-  else
-    raise ArgumentError.new("mukou")
-  end
+def greeting(proc_1, proc_2, proc_3)
+  puts proc_1.call("おはよう")
+  puts proc_2.call("こんにちは")
+  puts proc_3.call("こんばんは")
 end
 
-currency_of(:japan)
-currency_of(:aaa)
+shuffle_proc = Proc.new { |text| text.chars.shuffle.join }
+repeat_proc = Proc.new { |text| text * 2 }
+question_proc = Proc.new { |text| "#{text}?" }
+
+greeting(shuffle_proc, repeat_proc, question_proc)
