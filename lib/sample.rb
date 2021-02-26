@@ -1,11 +1,15 @@
-module Loggable
-
+def currency_of(country)
+  case country
+  when :japan
+    "yen"
+  when :us
+    "dollar"
+  when :india
+    "rupee"
+  else
+    raise ArgumentError.new("mukou")
+  end
 end
 
-class Product
-  include Loggable
-end
-
-p Product.include?(Loggable)
-p Product.included_modules
-p Product.ancestors
+currency_of(:japan)
+currency_of(:aaa)
